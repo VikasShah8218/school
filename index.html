@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login-style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">Hello Family </div>
+        <div class="details">
+            <form id="form" onsubmit="navigate();">
+                
+                <label for="fname"><i class="fa-solid fa-user"></i> User ID</label>
+                <input type="text" id="fname" required name="userid" placeholder="Type your username">
+                <div class="area"></div>
+                
+                <label for="lname"><i class="fa-solid fa-lock"></i> Password</label>
+                <input type="password" id="lname" required name="password" placeholder="Your Password">
+                <div class="area"></div>
+
+                <label for="login_as"><i class="fa-regular fa-circle-user"></i> Login As </label>
+                <select name="login_as" id="login_as"  required>
+                    <option  selected></option>
+                    <option value="0">Admin</option>
+                    <option value="1">Principal</option>
+                    <option value="2">Parents</option>
+                    <option value="3">Teacher</option>
+                </select>
+                <button type="submit" ><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            </form>
+        </div>
+        <div class="forgot">Forgot Password</div>
+        <div class="extra">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <div class="text">You can connect with us</div>
+
+        </div>
+    </div>
+    
+    <script>
+        const navigate = () => {
+            console.log(document.getElementById("login_as").text)
+            if (document.getElementById("login_as").value != "2")
+            document.getElementById("form").setAttribute("action","test.html");
+            else{
+            document.getElementById("form").setAttribute("action","parents.html");
+
+            }
+        }
+    </script>
+
+</body>
+</html>

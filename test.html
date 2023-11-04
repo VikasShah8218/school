@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="ON19ZvN9hbb9GiRCiHNRykZY128uv6gTzKEAfhqbQ6I52QgGjaPnA4bqGlqpVpy3" />
+    <title>Family Corp</title>
+    <link rel="icon" href="/static/images/1.svg" type="image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cont.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="dropdown.css">
+  </head>
+  <body>
+    <nav class="side-nav">
+      <header>
+        <a href="/"><b>Family corp</b></a>
+      </header>
+
+      <a href="#" class="active"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+      <a href="#"  onclick="show_items();" > <i class="fa-solid fa-users-rectangle"></i> Classes </a>
+
+      <div class="option_menu" id="show_items">
+        <a href="#"> <p> Class A </p> </a>
+        <a href="#"> <p> Class B </p> </a>
+        <a href="#"> <p> Class C </p> </a>
+        <a href="#"> <p> Class D </p> </a>
+      </div>
+
+      <style>
+        
+        .option_menu a{
+          text-decoration: none;
+          color: white;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.163);
+
+        }
+        .option_menu p{
+          text-align: end;
+          padding: 10px;
+          margin-right: 90px;
+          /* text-decoration: none; */
+          color: white;
+          font-weight: 100;
+        }
+
+        .option_menu a p:hover{
+          background: #33363A;
+          transition: 0.2s ease;
+        }
+      </style>
+
+      <a href="#"> <i class="fa-solid fa-pen-clip"></i> Report </a>
+      <a href="#" > <i class="fa-solid fa-shield-halved"></i> Articles </a>
+      <a href="#"> <i class="fa-solid fa-bell"></i> My tasks </a>
+      <a href="/"> <i class="fa-solid fa-right-to-bracket"></i> Signout </a>
+    </nav>
+
+    <nav class="top-nav">
+      <i class="fa-solid fa-pen-ruler"></i>
+      <h1> <a href="/" style="text-decoration: none; color: white;">Teacher Space</a> </h1>
+      <div class="dropdown">
+        <span>Mr. Shah </span>   
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Admin</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+    <div class="datatable-container" id="data_table_01" >
+        <!-- ======= Header tools ======= -->
+        <div class="header-tools">
+         
+          <div class="search">
+            <input type="search" class="search-input" placeholder="Search..." />
+          </div>
+        </div>
+        <!-- ======= Table ======= -->
+        <table class="datatable">
+          <thead>
+            <tr>           
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Father's Name</th>
+              <th>Contact</th>
+              <th>Category</th>
+              <th>View</th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr>   
+              <td>Vikas</td>
+              <td>Shah</td>
+              <td>Sh. Tarkeshwar Shah</td>
+              <td>8950641705</td>
+              <td>Brilliant</td>
+              <td onclick="student_details(this);" id="1" class="action_on" ><i class="fa-solid fa-street-view"></i></td>
+            </tr>
+      
+            <tr>                          
+              <td>Dhruv</td>
+              <td>Singroha</td>
+              <td>Sh. </td>
+              <td>6291714623</td>
+              <td>Brilliant</td>
+              <td class="action_on" ><i class="fa-solid fa-street-view"></i></td>
+            </tr>
+      
+            <tr>                          
+              <td>Tony</td>
+              <td>Stark</td>
+              <td>Mr. Haward Stark</td>
+              <td>9817730229</td>
+              <td>Average</td>
+              <td class="action_on" ><i class="fa-solid fa-street-view"></i></td>
+            </tr>
+      
+            <tr>          
+              <td>Brus</td>
+              <td>Baner</td>
+              <td>Unknown</td>
+              <td>xxxxxxxxxx</td>
+              <td>Brilliant</td>
+              <td class="action_on"><i class="fa-solid fa-street-view"></i></td>
+            </tr>
+      
+            <tr>
+              <td>Natasha</td>
+              <td>xxx</td>
+              <td>Unknown</td>
+              <td>xxxxxxxxxx</td>
+              <td>Below Average</td>
+              <td class="action_on"><i class="fa-solid fa-street-view"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <!-- ======= Footer tools ======= -->
+        <div class="footer-tools">
+        
+      
+          <div class="pages">
+            <ul>
+              <li><span class="active">1</span></li>
+              <li><button>2</button></li>
+              <li><button>3</button></li>
+              <li><button>4</button></li>
+              <li><span>...</span></li>
+              <li><button>9</button></li>
+              <li><button>10</button></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="hiding_div" id="student_details" style="display: none;">
+      <div class="all_about_student"   >
+        <div class="student_details">
+          <div class="inner_box">
+            <div class="photo"> <img src="/imgs/shah.gif" alt=""> </div>
+            <div class="name"> Vikas Shah</div>
+            <p id="close_student" onclick="Toggleback(this);" ><i class="fa-regular fa-circle-xmark"></i></p>
+          </div>
+          <div class="details">
+            <div class="details_box">
+              <label for=""> Subject </label>
+              <div class="detail"> <p> Microwave </p> </div>
+            </div>
+            <div class="details_box">
+              <label for=""> Date </label>
+              <div class="detail"> <p> 07-10-2023 </p> </div>
+            </div>
+            <div class="details_box">
+              <label for=""> Marks </label>
+              <div class="detail"> <p> 83 / 100 </p> </div>
+            </div>
+            <div class="details_box">
+              <label for=""> Exam-Name </label>
+              <div class="detail"> <p> BITSAT </p> </div>
+            </div>
+          </div>
+        </div>
+        <div class="student_chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js.js"></script>
+    <script>
+
+      const student_details = (e) => {
+        console.log("Hellow",e.id);
+        document.getElementById("data_table_01").style.display  = "none";
+        document.getElementById('student_details').style.display = "block";
+
+
+      }
+      const Toggleback = (e) =>{
+        console.log("Close Button Pressed");
+        document.getElementById('student_details').style.display = "none";
+        document.getElementById("data_table_01").style.display  = "block";
+
+      }
+
+      const show_items = () =>{
+        const find = document.getElementById('show_items').style.display;
+        if (find == "none"){
+          document.getElementById('show_items').style.display = "block";
+        }
+        else{
+          document.getElementById('show_items').style.display = "none";
+
+        }
+        
+      }
+
+    </script>
+    <!-- chart JS -->
+    <script>
+      const ctx = document.getElementById('myChart');
+      const labels= [
+        "12-09-2023 \n Maths" ,
+        "13-09-2023 \n EMT",
+        "14-09-2023 \n DSP",
+        "15-09-2023 \n DSD",
+        "16-09-2023 \n AiML",
+        "17-09-2023 \n EVT",
+        "18-09-2023 \n WC",
+      ];
+      const chart_data = [65, 59, 80, 81, 56, 55, 40];
+      const data = {
+          labels: labels,
+          datasets: [{
+            barThickness: 60,
+            label: 'Avg Marks out of 100',
+            data: chart_data,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 159, 64)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)',
+              'rgb(54, 162, 235)',
+              'rgb(153, 102, 255)',
+              'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+          }]
+      };
+      new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

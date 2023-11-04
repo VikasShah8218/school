@@ -1,0 +1,66 @@
+.all_about_student{
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.216);
+
+
+}
+
+.student_details{
+    padding: 20px;
+    max-width: 400px;
+    /* border: 1px solid white; */
+
+}
+.all_about_student{
+    transition: 0.3s ease;
+}
+.all_about_student .student_chart{
+    width:-webkit-fill-available;
+}
+
+.student_details .inner_box{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.216);
+}
+.student_details .inner_box .photo{
+    width: 70px;
+}
+.student_details .inner_box .name{
+    font-size: 20px;
+    color: white;
+    padding: 30px;
+}
+.student_details .inner_box p{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+.student_details .inner_box .photo img{
+    border-radius: 100%;
+    width: 100%;
+    box-shadow: rgba(255, 255, 255, 0.379) 0px 7px 29px 0px;
+}
+
+.student_details .details{
+    /* padding: 10px; */
+}
+.student_details .details .details_box{
+    display: flex;
+    padding: 20px 20px 20px 0px ;
+}
+.student_details .details .details_box label{
+    font-size: 20px;
+    color: white;
+    min-width: 110px;
+
+}
+.student_details .details .details_box .detail{
+    font-size: 20px;
+    color: white;
+    margin-left: 150px;
+}
+
+
